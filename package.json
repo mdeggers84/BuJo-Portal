@@ -1,0 +1,24 @@
+{
+  "name": "bujo-portal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdeggers84/BuJo-Portal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdeggers84/BuJo-Portal/issues"
+  },
+  "homepage": "https://github.com/mdeggers84/BuJo-Portal#readme"
+}
