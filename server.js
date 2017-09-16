@@ -6,8 +6,7 @@ var path = require('path');
 
 // Set up the Express app
 var app = express();
-var PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var IP = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing (for POST requests)
 app.use(bodyParser.json());
@@ -25,6 +24,6 @@ require('./routes/html-routes.js')(app, path);
 // =============================================================
 // Starts the server listening
 
-app.listen(PORT, IP, function () {
-  console.log('Life organization happening on PORT / IP ' + PORT + IP + '!');
+app.listen(PORT, function () {
+  console.log('Life organization happening on PORT ' + PORT + '!');
 });
