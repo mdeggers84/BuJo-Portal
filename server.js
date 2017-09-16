@@ -26,5 +26,5 @@ require('./routes/html-routes.js')(app, path);
 // Starts the server listening
 
 app.listen(PORT, IP, function () {
-  console.log('Life organization happening on PORT ' + PORT + '!');
+  console.log('Life organization happening on PORT / IP ' + PORT + IP + '!');
 });
