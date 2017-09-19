@@ -6,8 +6,8 @@ var path = require('path');
 
 // Set up the Express app
 var app = express();
-var PORT = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var IP = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
 // Sets up the Express app to handle data parsing (for POST requests)
 app.use(bodyParser.json());
