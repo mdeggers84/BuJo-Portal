@@ -19,8 +19,14 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Import routes and give the server access to them.
-require('./routes/api-routes.js')(app);
-require('./routes/html-routes.js')(app, path);
+// require('./routes/api-routes.js')(app);
+// require('./routes/html-routes.js')(app, path);
+app.get('/test', function (req, res) {
+  res.send('hello');
+});
+app.get('/hello', function (req, res) {
+  res.sendFile(path.join(__dirname, '../public/hello.html'));
+})
 
 // =============================================================
 // Starts the server listening
