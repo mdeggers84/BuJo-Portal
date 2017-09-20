@@ -6,8 +6,8 @@ var path = require('path');
 
 // Set up the Express app
 var app = express();
-var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-var IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var PORT = process.env.PORT || 8080;
+var IP = process.env.IP || '0.0.0.0';
 
 // Sets up the Express app to handle data parsing (for POST requests)
 app.use(bodyParser.json());
@@ -19,18 +19,12 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Import routes and give the server access to them.
-// require('./routes/api-routes.js')(app);
-// require('./routes/html-routes.js')(app, path);
-app.get('/test', function (req, res) {
-  res.send('hello');
-});
-app.get('/hello', function (req, res) {
-  res.sendFile(path.join(__dirname, '../public/hello.html'));
-})
+require('./routes/api-routes.js')(app);
+require('./routes/html-routes.js')(app, path);
 
 // =============================================================
 // Starts the server listening
 
 app.listen(PORT, IP, function () {
-  console.log('Life organization happening on PORT / IP ' + PORT + IP + '!');
+  console.log('Life organization happening on PORT / IP ' + PORT + ', ' + IP + '!');
 });
