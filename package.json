@@ -13,7 +13,7 @@
     "npm": "*"
   },
   "scripts": {
-    "start": "cd client && npm .. && cd .. && concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node server.js",
     "client": "node start-client.js",
     "test": "echo \"Error: no test specified\" && exit 1"
