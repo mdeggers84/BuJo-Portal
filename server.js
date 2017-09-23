@@ -6,7 +6,7 @@ var path = require('path');
 
 // Set up the Express app
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 var IP = process.env.IP || '0.0.0.0';
 
 // Sets up the Express app to handle data parsing (for POST requests)
@@ -19,8 +19,8 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Import routes and give the server access to them.
-require('./routes/api-routes.js')(app);
-require('./routes/html-routes.js')(app, path);
+// require('./routes/api-routes.js')(app);
+// require('./routes/html-routes.js')(app, path);
 
 // =============================================================
 // Starts the server listening
