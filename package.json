@@ -4,6 +4,7 @@
   "description": "ToDo App",
   "main": "server.js",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "body-parser": "^1.18.1",
     "express": "^4.15.4"
   },
@@ -24,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/mdeggers84/BuJo-Portal/issues"
   },
-  "homepage": "https://github.com/mdeggers84/BuJo-Portal#readme"
+  "homepage": "https://github.com/mdeggers84/BuJo-Portal#readme",
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  }
 }
